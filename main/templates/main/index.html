@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block css %}
+<link rel ="stylesheet" href= "{% static 'css/home.css' %}">
+{% endblock %}
+{% block content%}
+
+              <div class = "d-flex flex-lg-row flex-md-column flex-sm-column flex-xs-column flex-xl-row flex-grow-1 flex-shrink-0 flex-wrap justify-content-around align-items-center main">
+
+                <div onclick='location.href = "{% url 'main:buy'%}";'  class="d-flex flex-column align-items-center justify-content-start card">
+                  <i class="fas fa-shopping-cart"></i>
+                  <h5>Get a Product</h5>
+                  <hr style='margin:15px;background:#AAA;'class='break'/>
+                  <p>Use our platform to get the list of products donated by others.</p>
+                </div>
+                <div onclick='location.href = "{% url 'main:seller'%}";' class="d-flex flex-column align-items-center justify-content-start card">
+                  <i class="far fa-lightbulb"></i>
+                  <h5>Covid Information Portal</h5>
+                  <hr style='margin:15px;background:#AAA;'class='break'/>
+                  <p>Read all the information related to CORONA</p>
+                </div>
+                <div onclick='location.href = "{% url 'main:donate'%}";'class="d-flex flex-column align-items-center justify-content-start card">
+                    <i class="fas fa-donate"></i>
+                  <h5>Donation Portal</h5>
+                  <hr style='margin:15px;background:#AAA;'class='break'/>
+                  <p>Use our platform to donate your product to 
+                    hundreds of users.</p>
+                </div>
+
+               
+
+{% endblock %}
